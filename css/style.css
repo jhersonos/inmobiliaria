@@ -149,6 +149,7 @@ button{
 	color: #ffffff;
 	border: 0;
 	text-transform: uppercase;
+	cursor:pointer;
 }
 #wrapper{
 	width: 100%;
@@ -284,6 +285,7 @@ button{
 	color: white;
 	height: 48px;
 	border-radius: 24px;
+	cursor: pointer;
 	font-family: 'Open Sans', sans-serif;
 }
 #wrapper section{
@@ -313,6 +315,7 @@ button{
 	float:left;
 }
 #wrapper section#consultoria .head .ico{
+	cursor: pointer;
 	position: absolute;
 	right: 13rem;
 	background-image: url('../img/iconos/Close.png');
@@ -542,6 +545,7 @@ button{
 	border: 0;
 	text-transform: uppercase;
 	position: relative;
+	cursor: pointer;
 	right: 7.5rem;
 }
 #wrapper .footer{
@@ -554,6 +558,7 @@ button{
 	width: 100%;
 }
 #wrapper .footer .nav-foot .item-foot{
+	cursor: pointer;
 	width: 8rem;
 	color: white;
 	display: inline-block;
