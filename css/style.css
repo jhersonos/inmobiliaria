@@ -8,8 +8,24 @@ html,body{
 button{
 	background-color: #ff7802 !important;
 }
+.none{
+	display: none !important;
+}
+.m-top{
+	margin-top: 1rem !important;
+	background-color: #f8f8f8;
+}
 .white{
 	background-color: white;
+}
+.logo img{
+	width: 7rem;
+	vertical-align: middle;
+}
+.mobile-logo img{
+	width: 7rem;
+	vertical-align: middle;
+	margin:.8rem;
 }
 .nav{
 	width: 100%;
@@ -127,7 +143,7 @@ button{
 	margin-bottom: 0.5rem;
 }
 .background .canvas .title-container .icon{
-	background-image: url('../img/iconos/divider.png');
+	// background-image: url('../img/iconos/divider.png');
 	background-position: center;
 	background-size: 100%;
 	display: inline-block;
@@ -204,6 +220,7 @@ button{
     background-color: #285b58;
     display: inline-block;
     vertical-align: top;
+    z-index: 2;
 }
 #wrapper section .body .container .item .item-container{
 	width: 100%;
@@ -221,25 +238,33 @@ button{
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     text-transform: uppercase;
+    z-index: 1;
 }
 #wrapper section .body .container .item .item-container .hover .ico-more{
-	background-image: url('../img/iconos/Close.png');
+	// background-image: url('../img/iconos/Close.png');
+	background-image: url(https://image.flaticon.com/icons/png/512/32/32360.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 80%;
 	height: 65%;
 	display: inline-block;
+	z-index: 1;
 }
 #wrapper section .body .container .item .item-container .hover .text-more{
 	text-align: center;
-	font-size: 0.8rem;
-	color: white;
+	font-size: 0.7rem;
+	color: black;
+	z-index: 1;
+	cursor: pointer;
 }
-#wrapper section .body .container .item .item-container .background:hover{
+#wrapper section .body .container .item:hover{
+	display: inline-block;
+}
+#wrapper section .body .container .item:hover .background{
 	opacity: 0.4;
 }
-#wrapper section .body .container .item .item-container .background:hover + .hover{
+#wrapper section .body .container .item:hover .hover{
 	display: inline-block;
 }
 #wrapper section .body .container .item .item-container .background{
@@ -298,23 +323,23 @@ button{
 .back-white{
 	background-color: white !important;
 }
-#wrapper section#consultoria .head{
+#wrapper section#section-consultoria .head{
 	width: 100%;
 	height: 5rem;
 }
-#wrapper section#consultoria .head .title{
+#wrapper section#section-consultoria .head .title{
 	position: absolute;
 	left:13rem;
 	text-align: left;
 	font-size: 2rem;
 }
-#wrapper section#consultoria .head .title .subtitle{
+#wrapper section#section-consultoria .head .title .subtitle{
 	font-size: 0.9rem;
 }
-#wrapper section#consultoria .head .title .line-subtitle{
+#wrapper section#section-consultoria .head .title .line-subtitle{
 	float:left;
 }
-#wrapper section#consultoria .head .ico{
+#wrapper section#section-consultoria .head .ico{
 	cursor: pointer;
 	position: absolute;
 	right: 13rem;
@@ -324,35 +349,35 @@ button{
 	width: 2rem;
 	height: 2rem;
 }
-#wrapper section#consultoria .container-consultoria{
+#wrapper section#section-consultoria .container-consultoria{
 	width: 100%;
 	text-align: center;
 }
-#wrapper section#consultoria .container-consultoria .element{
+#wrapper section#section-consultoria .container-consultoria .element{
 	width: 90%;
 	display: inline-block;
 	text-align: left;
 }
-#wrapper section#consultoria .container-consultoria .row-1{
+#wrapper section#section-consultoria .container-consultoria .row-1{
 	width: 60%;
 	display: inline-block;
 	height: 12.5rem;
 }
-#wrapper section#consultoria .container-consultoria .row-2{
+#wrapper section#section-consultoria .container-consultoria .row-2{
 	width: 40%;
 	display: inline-block;
 	height: 12.5rem;
 }
-#wrapper section#consultoria .container-consultoria .row-1 ul{
+#wrapper section#section-consultoria .container-consultoria .row-1 ul{
 	padding-left: 10.5rem; 
 }
-#wrapper section#consultoria .container-consultoria .row-1 ul li{	
+#wrapper section#section-consultoria .container-consultoria .row-1 ul li{	
 	color:#285b58;
 }
-#wrapper section#consultoria .container-consultoria .row-1 ul li span{
+#wrapper section#section-consultoria .container-consultoria .row-1 ul li span{
 	color:#666666;
 }
-#wrapper section#consultoria .container-consultoria .row-2 .image{
+#wrapper section#section-consultoria .container-consultoria .row-2 .image{
 	width: 100%;
 	background-image: url('../img/fotos/foto1.jpg');
 	height: 100%;
@@ -361,6 +386,7 @@ button{
 	width: 100%;
 	height: 22rem;
 	background-image: url('../img/fotos/foto9.jpeg');
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -448,6 +474,7 @@ button{
 }
 #wrapper #filosofia .body .backg-filosofia{
 	background-image: url('../img/fotos/foto9.jpeg');
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -503,7 +530,8 @@ button{
 }
 #wrapper #contactenos .body-contactenos .up .input input[type="text"]{
 	border-bottom: 2px solid #eeeeee;
-    width: 13.8rem;
+    /* width: 13.8rem;*/
+    width: 71%;
     height: 2rem;
     border-left: 0;
     border-right: 0;
@@ -513,12 +541,12 @@ button{
 #wrapper #contactenos .body-contactenos .down{
 	display: inline-block;
 	width: 80%;
-	text-align: center;
+	text-align: right;
 	margin:1rem 0;
 }
 #wrapper #contactenos .body-contactenos .down #comment{
 	border-bottom: 2px solid #eeeeee;
-	width: 80%;
+	width: 90%;
 	height: 6rem;
 	display: inline-block;
 	border-left: 0;
@@ -551,11 +579,27 @@ button{
 #wrapper .footer{
 	background-color:#2a5862;
 	width: 100%;
-	height: 14rem;
+	height: 8rem;
 }
 #wrapper .footer .nav-foot{
 	text-align: center;
 	width: 100%;
+}
+#wrapper .footer .nav-foot .ul-foot{
+	list-style: none;
+}
+#wrapper .footer .nav-foot .ul-foot li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 1rem;
+}
+#wrapper .footer .nav-foot .ul-foot li a{
+	text-decoration: none;
+	color:white;
+	text-transform: uppercase;
+}
+#wrapper .footer .nav-foot .ul-foot li.r{
+	float: right;
 }
 #wrapper .footer .nav-foot .item-foot{
 	cursor: pointer;
@@ -573,10 +617,182 @@ button{
     width: 3rem;
     float: right;
     position: relative;
-    right: 10rem;
-    bottom: 2.5rem;
 }
-@media only screen and (max-width: 460px){
+@media only screen and (min-width:501px) and (max-width: 1070px){
+	.nav{
+		display: none;
+	}
+	.mobile-nav-button {
+	  width: 35px;
+	  position: absolute;
+	  margin: 1rem;
+	  right: 0;
+	  top: 0;
+	  z-index: 9999;
+	  cursor: pointer;
+	  width: 25px;
+	  height: 30px;
+	}
+
+	.mobile-nav-button .mobile-nav-button__line {
+	  width: 100%;
+	  height: 2px;
+	  background: #0e0e0e;
+	  position: relative;
+	  transition: 1s ease;
+	}
+
+	.mobile-nav-button .mobile-nav-button__line:nth-of-type(2) { margin: 0.5rem 0; }
+
+	.mobile-nav-button .mobile-nav-button__line--1 {
+	  transform: rotate(45deg);
+	  top: 13px;
+	  position: absolute;
+	}
+
+	.mobile-nav-button .mobile-nav-button__line--2 { display: none; }
+
+	.mobile-nav-button .mobile-nav-button__line--3 {
+	  transform: rotate(135deg);
+	  top: 13px;
+	  position: absolute;
+	}
+
+	.mobile-menu {
+	  display: block;
+	  /*max-width: 500px;*/
+	  width: 100%;
+	  right: -100%;
+	  height: 100vh;
+	  background: #fcb852;
+	  position: absolute;
+	  z-index: 9998;
+	  transition: 0.6s ease;
+	  top: 0;
+	  opacity: 0;
+	}
+
+	.mobile-menu ul {
+	  position: relative;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  padding: 0;
+	}
+
+	.mobile-menu ul li { list-style: none; }
+
+	.mobile-menu ul li a {
+	  width: 100%;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	  display: block;
+	  text-align: center;
+	  text-decoration: none;
+	  color: #0e0e0e;
+	  font-size: 3rem;
+	  font-weight: bold;
+	  overflow: hidden;
+	  position: relative;
+	}
+
+	.mobile-menu ul li a:after {
+	  content: '';
+	  background: #0e0e0e;
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  right: -100%;
+	  top: 0;
+	  z-index: -1;
+	  transition: 0.4s ease;
+	}
+
+	.mobile-menu ul li a:hover { color: #fff; }
+
+	.mobile-menu ul li a:hover:after { right: 0; }
+
+	.mobile-menu img {
+	  position: absolute;
+	  width: 150px;
+	  display: block;
+	  left: 50%;
+	  top: 3rem;
+	  transform: translatex(-50%);
+	  padding: 0;
+	  text-align: center;
+	}
+
+	.mobile-menu--open {
+	  right: 0;
+	  opacity: 1;
+	}
+	.text {
+	  max-width: 800px;
+	  margin: 0 auto;
+	  display: block;
+	  text-align: center;
+	}
+	#nav-head{
+		display: block;
+	    position: fixed;
+	    z-index: 4;
+	    width: 100%;
+	    height: 3rem;
+	}
+	/* section */
+	#wrapper section#section-consultoria .head .title{
+		position: absolute;
+	    left: 1rem;
+	    text-align: left;
+	    font-size: 2rem;
+	} 
+	#wrapper section#section-consultoria .head .ico{
+		top:2.5rem;
+	}
+	#wrapper section#section-consultoria .container-consultoria .row-1 ul{
+		padding-left: 0;	
+	}
+	#wrapper #empresa{
+		margin-bottom: 2rem;
+	}
+	#wrapper #contactenos{
+		height: 33rem;
+	}
+	#wrapper #contactenos .body-contactenos .up .input{
+	    display: inline-block;
+	    width: 90%;
+	    text-align: center;
+	    margin: 1rem;
+	}
+	#wrapper #contactenos .body-contactenos .down #comment{
+	    border-bottom: 2px solid #eeeeee;
+	    width: 64%;
+        height: auto; 
+	    display: inline-block;
+	    border-left: 0;
+	    border-right: 0;
+	    margin: 1rem;
+	    border-top: 0;
+	    border-radius: 0px;
+	    border-bottom: 2px solid #eeeeee;
+	}
+	#wrapper .footer{
+		padding-top: 1rem;
+	}
+	#wrapper .footer .nav-foot .ul-foot li{
+	    display: block;
+	    vertical-align: top;
+	    padding: 0 1rem;
+	    font-size: 0.8em;
+	}
+	#wrapper .footer .nav-foot .ul-foot li.r{
+		float: right;
+	    top: 4rem;
+	    position: absolute;
+	    right: 1rem;
+	}
+}
+@media only screen and (max-width: 500px){
 	.nav{
 		display: none;
 	}
@@ -585,7 +801,7 @@ button{
 		height: 13rem;
 		margin:0.4rem;
 	}
-	#wrapper section#consultoria .head .title {
+	#wrapper section#section-consultoria .head .title {
 		left:0;
 		width: 100%;
 	}
@@ -603,7 +819,7 @@ button{
 	    width: 100%;
 	    text-align: center;
 	    display: inline-block;
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    letter-spacing: .5px;
 	    font-weight: 400;
 	}
@@ -627,7 +843,7 @@ button{
 	#wrapper #filosofia .body{
 		margin:0;
 	}
-	#consultoria{
+	#section-consultoria{
 		display: none;
 	}
 	#wrapper #contactenos .foot{
@@ -676,7 +892,7 @@ button{
 /*	#wrapper #contactenos{
 		display: none;
 	}*/
-	.text {
+.text {
   max-width: 800px;
   margin: 0 auto;
   display: block;
